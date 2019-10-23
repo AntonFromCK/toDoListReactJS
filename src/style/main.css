@@ -1,0 +1,15 @@
+.done {
+  text-decoration: line-through;
+}
+.important {
+  font-weight: bold;
+  color: steelblue;
+}
+.todo-app {
+  margin: 2rem auto 0 auto;
+  max-width: 400px;
+}
+.top-panel {
+  margin: 1rem 0;
+}
+/*# sourceMappingURL=main.css.map */

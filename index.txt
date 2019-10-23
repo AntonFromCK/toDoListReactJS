@@ -1,0 +1,136 @@
+/*function test({
+  host = 'local host',
+  port = 12345,
+  user = 'guest'} = {} ) {
+  console.log(host, port, user );
+}
+
+test({ port: 222 });
+test();*/
+
+/*const vocab = {
+  syka: 'syka',
+  blyad: 'blyad',
+  kyrva: 'kyrva'
+};
+
+const { syka: poganaDevka, ...otherww } = vocab;
+
+console.log(otherww);
+
+
+const testArr = [1,2,8,4,6,84,8845,656565,];
+
+const [a, b, ...other] = testArr;
+console.log(a,b,other);*/
+
+
+/*const x = 20;
+const y = 50;
+
+const test = {
+  x,
+  y,
+  test(){
+    console.log('its work')
+  }
+};
+console.log(test);
+test.test();*/
+
+const def = {
+  host: 'localhost',
+  dbname: 'blog',
+  user: 'admin'
+};
+
+const opts = {
+  user: 'Anton',
+  pass: 'qwerty'
+};
+
+const newOBJECT_ASSIGN = Object.assign({}, def, opts);
+console.log(newOBJECT_ASSIGN);
+
+const newOBJECT_SPREAD = { ...def, ...opts };
+console.log(newOBJECT_SPREAD);
+
+
+/*const animal = {
+  say: function () {
+    console.log(`${this.name} say ${this.voice}`);
+  }
+};*/
+
+/*const dog = {
+  name: 'Doggy',
+  voice: 'woof'
+};
+Object.setPrototypeOf(dog,animal);
+const cat = {
+  name: 'Kyza',
+  voice: 'meow'
+};
+Object.setPrototypeOf(cat,animal);
+
+cat.say();*/
+
+
+
+/*const dog = Object.create(animal);
+dog.name = "Doggy";
+dog.voice = 'woof';
+
+dog.say();
+
+function createAnimal(name, voice) {
+  const result = Object.create(animal);
+  result.name = name;
+  result.voice = voice;
+
+  return result;
+}
+
+const Doggy = createAnimal('Doggy', 'Afffff');
+const KotE = createAnimal('KatE', 'Meow');*/
+
+
+
+/*function Animal (name, voice) {
+  this.name = name;
+  this.voice = voice;
+}
+
+Animal.prototype.say = function () {
+  console.log(`${this.name} say ${this.voice}`);
+};
+
+
+const Doggy = new Animal('Doggy', 'Afffff');
+const KotE = new Animal('KatE', 'Meow');
+
+Doggy.say();
+KotE.say();*/
+
+class Animal {
+  constructor(name, voice) {
+    this.name = name;
+    this.voice = voice;
+  }
+
+  say(){
+    console.log(`${this.name} say ${this.voice}`);
+  }
+}
+
+class Bird extends Animal{
+  constructor(name, voice, canFly){
+    super(name, voice);
+    this.canFly = canFly;
+  }
+}
+
+const duck = new Bird('Donald', 'Krya krya', true);
+
+duck.say();
+
